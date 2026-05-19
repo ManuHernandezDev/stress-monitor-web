@@ -1,1 +1,70 @@
-<p>sos works!</p>
+<mat-card>
+
+  <h2>
+    Emergency Contact
+  </h2>
+
+  <mat-form-field appearance="outline">
+
+    <mat-label>
+      Name
+    </mat-label>
+
+    <input
+      matInput
+      [(ngModel)]="contact.name"
+    >
+
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+
+    <mat-label>
+      Phone
+    </mat-label>
+
+    <input
+      matInput
+      [(ngModel)]="contact.phone"
+    >
+
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+
+    <mat-label>
+      Email
+    </mat-label>
+
+    <input
+      matInput
+      [(ngModel)]="contact.email"
+    >
+
+  </mat-form-field>
+
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="registerContact()"
+  >
+    Save Contact
+  </button>
+
+</mat-card>
+
+<mat-card class="panic-card">
+
+  <h2>
+    Emergency Alert
+  </h2>
+
+  <button
+    mat-raised-button
+    color="warn"
+    (click)="panic()"
+  >
+    PANIC BUTTON
+  </button>
+
+</mat-card>
