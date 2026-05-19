@@ -1,1 +1,40 @@
-<p>admin works!</p>
+<mat-card>
+
+  <h2>
+    Stress Analytics
+  </h2>
+
+  <div class="chart-container">
+
+    <canvas
+
+      baseChart
+
+      [data]="pieChartData"
+
+      [type]="pieChartType">
+
+    </canvas>
+
+  </div>
+
+</mat-card>
+
+<mat-card>
+
+  <h2>
+    Export Data
+  </h2>
+
+  <button
+
+    mat-raised-button
+
+    color="primary"
+
+    (click)="downloadCsv()"
+  >
+    Download CSV
+  </button>
+
+</mat-card>
