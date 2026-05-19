@@ -6,7 +6,7 @@ import { LoginComponent }
 import { Home }
   from './features/dashboard/home/home';
 
-import { Evaluation }
+import { EvaluationComponent }
   from './features/evaluation/evaluation/evaluation';
 
 import { Sos }
@@ -58,11 +58,12 @@ export const routes: Routes = [
       {
         path: 'evaluation',
 
-        component: Evaluation
+        component: EvaluationComponent
       },
 
       {
         path: 'sos',
+
 
         component: Sos
       },

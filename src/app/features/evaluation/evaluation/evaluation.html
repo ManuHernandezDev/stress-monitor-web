@@ -1,1 +1,87 @@
-<p>evaluation works!</p>
+<mat-card>
+
+  <h2>
+    Stress Evaluation
+  </h2>
+
+  <h3>
+    SISCO Questions
+  </h3>
+
+  @for(answer of [0,1,2,3,4];
+    track answer) {
+
+    <div>
+
+      <label>
+        Question {{answer + 1}}
+      </label>
+
+      <input
+        type="number"
+        min="1"
+        max="5"
+        [(ngModel)]="siscoAnswers[answer]"
+      >
+
+    </div>
+  }
+
+  <h3>
+    MBI Questions
+  </h3>
+
+  @for(answer of [0,1,2,3,4];
+    track answer) {
+
+    <div>
+
+      <label>
+        Question {{answer + 1}}
+      </label>
+
+      <input
+        type="number"
+        min="1"
+        max="5"
+        [(ngModel)]="mbiAnswers[answer]"
+      >
+
+    </div>
+  }
+
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="submitEvaluation()"
+  >
+    Submit Evaluation
+  </button>
+
+</mat-card>
+
+@if(result) {
+
+  <mat-card>
+
+    <h2>
+      Evaluation Result
+    </h2>
+
+    <p>
+      SISCO Score:
+      {{result.siscoScore}}
+    </p>
+
+    <p>
+      MBI Score:
+      {{result.mbiScore}}
+    </p>
+
+    <p>
+      Stress Level:
+      {{result.stressLevel}}
+    </p>
+
+  </mat-card>
+}
