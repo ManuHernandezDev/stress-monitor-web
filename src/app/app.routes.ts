@@ -12,7 +12,7 @@ import { EvaluationComponent }
 import { SosComponent }
   from './features/sos/sos/sos';
 
-import { Admin }
+import { AdminComponent }
   from './features/admin/admin/admin';
 
 import { MainLayout }
@@ -71,7 +71,7 @@ export const routes: Routes = [
       {
         path: 'admin',
 
-        component: Admin
+        component: AdminComponent
       }
     ]
   }
