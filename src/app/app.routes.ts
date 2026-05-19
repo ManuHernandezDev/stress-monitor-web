@@ -9,7 +9,7 @@ import { Home }
 import { EvaluationComponent }
   from './features/evaluation/evaluation/evaluation';
 
-import { Sos }
+import { SosComponent }
   from './features/sos/sos/sos';
 
 import { Admin }
@@ -65,7 +65,7 @@ export const routes: Routes = [
         path: 'sos',
 
 
-        component: Sos
+        component: SosComponent
       },
 
       {
